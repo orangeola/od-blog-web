@@ -17,7 +17,7 @@ function Home() {
       <div>
       {posts && posts.map((task) => {
         return <div key={task._id}>
-          {task.title}<br></br>
+          <a href={'/post/' + task._id}>{task.title}</a><br></br>
           {task.text}<br></br>
           {task.date}<br></br>
           <hr></hr>
