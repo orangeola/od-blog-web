@@ -1,0 +1,31 @@
+html, body {
+    min-height: 100vh; margin:0;
+}
+
+.App {
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh; margin:0;
+    justify-content: center;
+}
+
+.Hero {
+    flex:1;
+    justify-content: center;
+    align-self: center;
+    min-width: 500px;
+}
+
+@media screen and (max-width: 500px){
+    .Hero {
+        min-width: 0;
+    }
+}
+
+.Footer {
+    min-height:50px; background:PapayaWhip;
+}
+
+.Header {
+    min-height:50px; background:lightcyan;
+}

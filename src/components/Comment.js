@@ -1,5 +1,6 @@
 import { useParams, } from "react-router-dom";
 import React, {useState, useEffect} from 'react';
+import CommentForm from './CommentForm'
 
 function Comment(props) {
   const {id} = useParams();
@@ -17,6 +18,7 @@ function Comment(props) {
   return (
     <div className="Comment">
       <div>
+        <CommentForm />
         {comments && comments.map((task) => {
           return <div key={task._id}>
             <i>{task.author}</i><br></br>

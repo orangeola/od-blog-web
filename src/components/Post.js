@@ -22,8 +22,6 @@ function Post() {
         <h1>{post.title}</h1>
         <p>{post.text}</p>
         <p>Posted at: {post.date}</p>
-        <h3>Comments</h3>
-        <hr></hr>
         <Comment />
       </div>
       }
