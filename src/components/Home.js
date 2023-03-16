@@ -1,7 +1,24 @@
+import '../styles/Home.css'
 import React, {useState, useEffect} from 'react';
 
 function Home(props) {
   let [posts, setPosts] = useState(null);
+
+  function limitLengthText(input){
+    let desiredLength = 100;
+    if(input.length > desiredLength){
+      return input.slice(0, desiredLength-input.length) + "...";
+    }
+    return input;
+  }
+
+  function limitLengthTitle(input){
+    let desiredLength = 200;
+    if(input.length > desiredLength){
+      return input.slice(0, desiredLength-input.length) + "...";
+    }
+    return input;
+  }
 
   useEffect(() => {
     fetch('http://localhost:5000/post')
@@ -13,12 +30,12 @@ function Home(props) {
   return (
     <div className="Home">
       <h3>List of Posts:</h3>
-      <div>
+      <div className="homePost">
       {posts && posts.map((task) => {
         return <div key={task._id}>
-          <a href={'/post/' + task._id}>{task.title}</a><br></br>
-          {task.text}<br></br>
-          {props.date(task.date)}<br></br>
+          <a href={'/post/' + task._id}>{limitLengthTitle(task.title)}</a><br></br>
+          {limitLengthText(task.text)}<br></br>
+          <i>{props.date(task.date)}</i><br></br>
           <hr></hr>
           </div>;
       })}

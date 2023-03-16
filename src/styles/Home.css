@@ -1,0 +1,8 @@
+.homePost {
+    text-overflow: ellipsis;
+    white-space: pre-line;
+}
+
+.Post .Comment {
+    white-space: pre-line;
+}
