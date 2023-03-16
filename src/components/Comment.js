@@ -5,6 +5,7 @@ import CommentForm from './CommentForm'
 function Comment(props) {
   const {id} = useParams();
   let [comments, setComments] = useState(null);
+  let [success, setSuccess] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/post/${id}/comment`)
@@ -13,12 +14,12 @@ function Comment(props) {
     console.log(data.comment)
     setComments(data.comment);
     })
-  }, []);
+  }, [success]);
 
   return (
     <div className="Comment">
       <div>
-        <CommentForm />
+        <CommentForm success={success} setSuccess={setSuccess}/>
         {comments && comments.map((task) => {
           return <div key={task._id}>
             <i>{task.author}</i><br></br>
