@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
-function Home() {
+function Home(props) {
   let [posts, setPosts] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:5000/post')
    .then(response => response.json())
    .then(data => {
-    console.log(data.post);
     setPosts(data.post)})
   }, []);
 
@@ -19,7 +18,7 @@ function Home() {
         return <div key={task._id}>
           <a href={'/post/' + task._id}>{task.title}</a><br></br>
           {task.text}<br></br>
-          {task.date}<br></br>
+          {props.date(task.date)}<br></br>
           <hr></hr>
           </div>;
       })}
