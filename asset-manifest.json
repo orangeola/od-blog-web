@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/od-blog-web/static/css/main.4cc78f3a.css",
+    "main.js": "/od-blog-web/static/js/main.b246aeda.js",
+    "index.html": "/od-blog-web/index.html",
+    "main.4cc78f3a.css.map": "/od-blog-web/static/css/main.4cc78f3a.css.map",
+    "main.b246aeda.js.map": "/od-blog-web/static/js/main.b246aeda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cc78f3a.css",
+    "static/js/main.b246aeda.js"
+  ]
+}
