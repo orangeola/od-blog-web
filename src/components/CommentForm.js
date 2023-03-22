@@ -11,7 +11,7 @@ function CommentForm(params) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-    let res = await fetch(`http://localhost:5000/post/${id}/comment`, {
+    let res = await fetch(`https://od-blog-api.orangeola.repl.co/post/${id}/comment`, {
        method: 'POST',
        body: JSON.stringify({
           author: author,

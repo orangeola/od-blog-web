@@ -9,7 +9,7 @@ function Comment(props) {
   let [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/post/${id}/comment`)
+    fetch(`https://od-blog-api.orangeola.repl.co/post/${id}/comment`)
    .then(response => response.json())
    .then(data => {
     console.log(data.comment)

@@ -21,7 +21,7 @@ function Home(props) {
   }
 
   useEffect(() => {
-    fetch('http://localhost:5000/post')
+    fetch('https://od-blog-api.orangeola.repl.co/post')
    .then(response => response.json())
    .then(data => {
     setPosts(data.post)})

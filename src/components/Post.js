@@ -8,7 +8,7 @@ function Post(props) {
   let [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/post/${id}`)
+    fetch(`https://od-blog-api.orangeola.repl.co/post/${id}`)
    .then(response => response.json())
    .then(data => {
     console.log(data.post[0])
